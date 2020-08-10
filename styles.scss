@@ -19,6 +19,7 @@ body {
 }
 
 header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,9 +83,37 @@ header {
                 }
             }
         }
+        @media(max-width: 768px) {
+            display: none;
+            flex-direction: column;
+            background: tomato;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: absolute;
+            top: 10px;
+            a {
+                &:nth-child(2) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .hiddenMenu {
+        display: none;
+        cursor: pointer;
+        i {
+            font-size: 22px;
+            &:hover {
+                color: #646f79;
+            }
+        }
+        @media(max-width: 768px) {
+            display: flex;
+        }
     }
     @media(max-width: 768px) {
-        width: auto;
+        padding: 15px 20px;
     }
 }
 
@@ -230,7 +259,7 @@ main {
                             text-align: center;
                             margin-bottom: 40px;
                             .top {
-                                margin-left: 30px;
+                                display: inline-flex;
                             }
                         }
                     }
@@ -310,6 +339,9 @@ footer {
                     &:nth-child(2) {
                         margin-left: 10px;
                     }
+                }
+                @media(max-width: 768px) {
+                    padding: 20px 0;
                 }
             }
         }

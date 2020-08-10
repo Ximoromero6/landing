@@ -22,6 +22,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,8 +115,52 @@ header .menu a:nth-child(2):hover {
 }
 
 @media (max-width: 768px) {
+  header .menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: tomato;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+  }
+  header .menu a:nth-child(2) {
+    margin: 0;
+  }
+}
+
+header .hiddenMenu {
+  display: none;
+  cursor: pointer;
+}
+
+header .hiddenMenu i {
+  font-size: 22px;
+}
+
+header .hiddenMenu i:hover {
+  color: #646f79;
+}
+
+@media (max-width: 768px) {
+  header .hiddenMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
   header {
-    width: auto;
+    padding: 15px 20px;
   }
 }
 
@@ -338,7 +383,9 @@ main #section2 .main .cardsContainer .card:nth-child(2) {
     margin-bottom: 40px;
   }
   main #section2 .main .cardsContainer .card .left .top {
-    margin-left: 30px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 }
 
@@ -463,6 +510,12 @@ footer .main .right .mobile a img {
 
 footer .main .right .mobile a:nth-child(2) {
   margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  footer .main .right .mobile {
+    padding: 20px 0;
+  }
 }
 
 @media (max-width: 768px) {
