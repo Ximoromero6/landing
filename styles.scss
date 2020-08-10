@@ -83,6 +83,9 @@ header {
             }
         }
     }
+    @media(max-width: 768px) {
+        width: auto;
+    }
 }
 
 main {
@@ -98,15 +101,25 @@ main {
         p {
             color: #151b26;
             font-weight: 400;
-            font-size: 48px;
             max-width: 70%;
             text-align: center;
             margin: auto;
             margin-bottom: 20px;
         }
+        h1 {
+            font-size: 48px;
+            @media(max-width: 768px) {
+                font-size: 38px;
+                max-width: 95%;
+            }
+        }
         p {
             font-size: 24px;
             color: #646f79;
+            @media(max-width: 768px) {
+                font-size: 20px;
+                max-width: 95%;
+            }
         }
         a.start {
             background-repeat: no-repeat;
@@ -136,6 +149,9 @@ main {
             &:hover {
                 opacity: .9;
             }
+            @media(max-width: 768px) {
+                width: 55%;
+            }
         }
         img {
             width: 80%;
@@ -144,6 +160,9 @@ main {
             margin-top: 40px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
             border-radius: 6px;
+            @media(max-width: 768px) {
+                width: 95%;
+            }
         }
     }
     #section2 {
@@ -197,10 +216,23 @@ main {
                         justify-content: center;
                         img {
                             width: 50%;
+                            @media(max-width: 768px) {
+                                width: 80%;
+                            }
                         }
                     }
                     &:nth-child(2) {
                         flex-direction: row-reverse;
+                    }
+                    @media(max-width: 768px) {
+                        flex-direction: column !important;
+                        .left {
+                            text-align: center;
+                            margin-bottom: 40px;
+                            .top {
+                                margin-left: 30px;
+                            }
+                        }
                     }
                 }
             }
@@ -279,6 +311,24 @@ footer {
                         margin-left: 10px;
                     }
                 }
+            }
+        }
+        @media(max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .right {
+                flex-direction: column;
+                margin: 20px 0;
+                justify-content: center;
+                align-items: center;
+                .socialMedia {
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+            }
+            .left {
+                order: 2;
             }
         }
     }

@@ -113,6 +113,12 @@ header .menu a:nth-child(2):hover {
   opacity: .9;
 }
 
+@media (max-width: 768px) {
+  header {
+    width: auto;
+  }
+}
+
 main {
   padding-top: 120px;
   /* background: tomato; */
@@ -130,16 +136,33 @@ main #section1 h1,
 main #section1 p {
   color: #151b26;
   font-weight: 400;
-  font-size: 48px;
   max-width: 70%;
   text-align: center;
   margin: auto;
   margin-bottom: 20px;
 }
 
+main #section1 h1 {
+  font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  main #section1 h1 {
+    font-size: 38px;
+    max-width: 95%;
+  }
+}
+
 main #section1 p {
   font-size: 24px;
   color: #646f79;
+}
+
+@media (max-width: 768px) {
+  main #section1 p {
+    font-size: 20px;
+    max-width: 95%;
+  }
 }
 
 main #section1 a.start {
@@ -176,6 +199,12 @@ main #section1 a.start:hover {
   opacity: .9;
 }
 
+@media (max-width: 768px) {
+  main #section1 a.start {
+    width: 55%;
+  }
+}
+
 main #section1 img {
   width: 80%;
   margin: 50px auto;
@@ -184,6 +213,12 @@ main #section1 img {
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  main #section1 img {
+    width: 95%;
+  }
 }
 
 main #section2 {
@@ -278,11 +313,33 @@ main #section2 .main .cardsContainer .card .right img {
   width: 50%;
 }
 
+@media (max-width: 768px) {
+  main #section2 .main .cardsContainer .card .right img {
+    width: 80%;
+  }
+}
+
 main #section2 .main .cardsContainer .card:nth-child(2) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  main #section2 .main .cardsContainer .card {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  main #section2 .main .cardsContainer .card .left {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  main #section2 .main .cardsContainer .card .left .top {
+    margin-left: 30px;
+  }
 }
 
 footer {
@@ -406,5 +463,42 @@ footer .main .right .mobile a img {
 
 footer .main .right .mobile a:nth-child(2) {
   margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  footer .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .main .right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 20px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .main .right .socialMedia {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  footer .main .left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
