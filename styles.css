@@ -211,6 +211,8 @@ main #section1 p {
 }
 
 main #section1 a.start {
+  -webkit-box-shadow: 0 0 8px rgba(59, 43, 91, 0.3);
+          box-shadow: 0 0 8px rgba(59, 43, 91, 0.3);
   background-repeat: no-repeat;
   margin: 60px auto;
   -webkit-box-sizing: inherit;
